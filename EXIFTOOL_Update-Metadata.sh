@@ -70,6 +70,8 @@ if [ "$CONFIRM" = "y" ]; then
 	[ -n "$GPS_LONG" ] && EXIF_CMD="$EXIF_CMD -GPSLatitudeRef=\"$GPS_LONG\""
 	[ -n "$GPS_LONG_REF" ] && EXIF_CMD="$EXIF_CMD -GPSLongitudeRef=\"$GPS_LONG_REF\""
 
+    echo "$EXIF_CMD"
+
     # Run the command
     eval "$EXIF_CMD \"$PHOTO_PATH\""
 
