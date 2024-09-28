@@ -72,8 +72,6 @@ if [ "$CONFIRM" = "y" ]; then
 
     echo "$EXIF_CMD"
 
-    echo "$
-
     # Run the command
     eval "$EXIF_CMD \"$PHOTO_DIR\""
 
