@@ -51,7 +51,7 @@ echo "Metadata to be applied:"
 [ -n "$GPS_LONG_REF" ] && echo "GPS_LONG_REF: $GPS_LONG_REF"
 echo ""
 
-echo "To all photos in: $PHOTO_PATH"
+echo "To all photos in: $PHOTO_DIR"
 echo ""
 echo "Do you want to proceed? (y/n)"
 read CONFIRM
@@ -72,11 +72,13 @@ if [ "$CONFIRM" = "y" ]; then
 
     echo "$EXIF_CMD"
 
+    echo "$
+
     # Run the command
-    eval "$EXIF_CMD \"$PHOTO_PATH\""
+    eval "$EXIF_CMD \"$PHOTO_DIR\""
 
     # Summary of applied changes
-    echo "Metadata applied successfully to photos in $PHOTO_PATH."
+    echo "Metadata applied successfully to photos in $PHOTO_DIR."
 else
     echo "Operation cancelled."
 fi
